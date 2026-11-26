@@ -8,6 +8,7 @@ import Membership from "./pages/membership";
 import Payments from "./pages/payments";
 import Trainers from "./pages/trainers";
 import Notifications from "./pages/notifications";
+import Memberform from "./components/memberform";
 
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/payments" element={<Payments />} />
         <Route path="/trainers" element={<Trainers />} />
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/memberform" element={<Memberform />} />
       </Routes>
     </BrowserRouter>
   );

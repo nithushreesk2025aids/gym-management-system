@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -8,35 +7,20 @@ function Dashboard() {
       <p>Welcome, Gym Owner!</p>
 
       <div className="dashboard-cards">
-        <Link to="/members" className="card">
+  
           <h3>Member Management</h3>
-          <p>Manage Gym Members</p>
-        </Link>
-
-        <Link to="/attendance" className="card">
+          <p>Manage Gym Members</p>        
           <h3>Attendance</h3>
-          <p>Manage Daily Attendance</p>
-        </Link>
-
-        <Link to="/membership" className="card">
+          <p>Manage Daily Attendance</p>       
           <h3>Membership</h3>
-          <p>Manage Membership Plans</p>
-        </Link>
-
-        <Link to="/payments" className="card">
+          <p>Manage Membership Plans</p>  
           <h3>Payments</h3>
           <p>Manage Member Payments</p>
-        </Link>
-
-        <Link to="/trainers" className="card">
           <h3>Trainers</h3>
           <p>Manage Gym Trainers</p>
-        </Link>
-
-        <Link to="/notifications" className="card">
           <h3>Notifications</h3>
           <p>View Gym Alerts</p>
-        </Link>
+        
       </div>
 
       <button onClick={() => window.location.href = "/"}>

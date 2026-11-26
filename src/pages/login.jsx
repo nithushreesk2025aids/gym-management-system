@@ -4,27 +4,37 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
-    if (email && password) {
-      navigate("/dashboard");
+    if (!email.includes("@") || !email.includes(".")) {
+      alert("Please enter a valid email address");
+      return;
     }
+
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters");
+      return;
+    }
+
+    console.log("Owner Login Successful");
+    console.log("Email:", email);
+
+    alert("Login Successful!");
+    navigate("/dashboard");
   };
 
   return (
-    <div className="login-page">
+    <div className="login-container">
+      <h2>Gym Management System</h2>
+      <h3>Owner Login</h3>
 
-      <h1>GYM MANAGEMENT SYSTEM</h1>
-
-      <form onSubmit={handleSubmit} className="login-form">
-
+      <form onSubmit={handleLogin}>
         <input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Enter Owner Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -32,16 +42,15 @@ function Login() {
 
         <input
           type="password"
-          placeholder="Enter your password"
+          placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          minLength={8}
           required
         />
 
-        <button type="submit">Submit</button>
-
+        <button type="submit">Login</button>
       </form>
-
     </div>
   );
 }

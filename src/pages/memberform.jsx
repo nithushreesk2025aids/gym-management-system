@@ -1,5 +1,5 @@
 import { useState } from "react";
-import memberschema from "./memberschema";
+import memberschema from "../components/memberschema";
 
 function Memberform() {
   const [member, setMember] = useState({

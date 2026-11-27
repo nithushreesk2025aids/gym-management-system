@@ -33,19 +33,12 @@ function Login() {
 
       <form onSubmit={handleLogin}>
         <input
-          type="email"
-          placeholder="Enter Owner Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="email" placeholder="Enter Owner Email" value={email} onChange={(e) => setEmail(e.target.value)}
           required
         />
 
         <input
-          type="password"
-          placeholder="Enter Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          minLength={8}
+          type="password" placeholder="Enter Password"  value={password} onChange={(e) => setPassword(e.target.value)} minLength={8}
           required
         />
 

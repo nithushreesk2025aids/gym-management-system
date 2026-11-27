@@ -8,7 +8,7 @@ import Membership from "./pages/membership";
 import Payments from "./pages/payments";
 import Trainers from "./pages/trainers";
 import Notifications from "./pages/notifications";
-import Memberform from "./components/memberform";
+import Memberform from "./pages/memberform";
 
 import "./App.css";
 
